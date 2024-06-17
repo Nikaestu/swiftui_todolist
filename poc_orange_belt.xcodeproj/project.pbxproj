@@ -15,7 +15,6 @@
 		029E5F2A2C18806B00CFAD70 /* poc_orange_beltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F292C18806B00CFAD70 /* poc_orange_beltTests.swift */; };
 		029E5F342C18806B00CFAD70 /* poc_orange_beltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F332C18806B00CFAD70 /* poc_orange_beltUITests.swift */; };
 		029E5F362C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F352C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift */; };
-		029E5F432C1882A300CFAD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */; };
 		029E5F462C18896800CFAD70 /* ToDoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F452C18896800CFAD70 /* ToDoListModel.swift */; };
 		029E5F482C188BDA00CFAD70 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F472C188BDA00CFAD70 /* ListView.swift */; };
 		029E5F4B2C1891A400CFAD70 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F4A2C1891A400CFAD70 /* TileView.swift */; };
@@ -51,7 +50,6 @@
 		029E5F2F2C18806B00CFAD70 /* poc_orange_beltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poc_orange_beltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E5F332C18806B00CFAD70 /* poc_orange_beltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltUITests.swift; sourceTree = "<group>"; };
 		029E5F352C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029E5F452C18896800CFAD70 /* ToDoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListModel.swift; sourceTree = "<group>"; };
 		029E5F472C188BDA00CFAD70 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		029E5F4A2C1891A400CFAD70 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		029E5F0B2C18806900CFAD70 = {
 			isa = PBXGroup;
 			children = (
-				029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */,
 				029E5F162C18806900CFAD70 /* poc_orange_belt */,
 				029E5F282C18806B00CFAD70 /* poc_orange_beltTests */,
 				029E5F322C18806B00CFAD70 /* poc_orange_beltUITests */,
@@ -264,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029E5F432C1882A300CFAD70 /* LaunchScreen.storyboard in Resources */,
 				029E5F202C18806B00CFAD70 /* Preview Assets.xcassets in Resources */,
 				029E5F1C2C18806B00CFAD70 /* Assets.xcassets in Resources */,
 			);
