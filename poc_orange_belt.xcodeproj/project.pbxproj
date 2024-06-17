@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */; };
 		029E5F182C18806900CFAD70 /* poc_orange_beltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */; };
 		029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F192C18806A00CFAD70 /* ContentView.swift */; };
 		029E5F1C2C18806B00CFAD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F1B2C18806B00CFAD70 /* Assets.xcassets */; };
@@ -14,6 +15,10 @@
 		029E5F2A2C18806B00CFAD70 /* poc_orange_beltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F292C18806B00CFAD70 /* poc_orange_beltTests.swift */; };
 		029E5F342C18806B00CFAD70 /* poc_orange_beltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F332C18806B00CFAD70 /* poc_orange_beltUITests.swift */; };
 		029E5F362C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F352C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift */; };
+		029E5F432C1882A300CFAD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */; };
+		029E5F462C18896800CFAD70 /* ToDoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F452C18896800CFAD70 /* ToDoListModel.swift */; };
+		029E5F482C188BDA00CFAD70 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F472C188BDA00CFAD70 /* ListView.swift */; };
+		029E5F4B2C1891A400CFAD70 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F4A2C1891A400CFAD70 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationTaskView.swift; sourceTree = "<group>"; };
 		029E5F142C18806900CFAD70 /* poc_orange_belt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poc_orange_belt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltApp.swift; sourceTree = "<group>"; };
 		029E5F192C18806A00CFAD70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,10 @@
 		029E5F2F2C18806B00CFAD70 /* poc_orange_beltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poc_orange_beltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E5F332C18806B00CFAD70 /* poc_orange_beltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltUITests.swift; sourceTree = "<group>"; };
 		029E5F352C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		029E5F452C18896800CFAD70 /* ToDoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListModel.swift; sourceTree = "<group>"; };
+		029E5F472C188BDA00CFAD70 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		029E5F4A2C1891A400CFAD70 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 		029E5F0B2C18806900CFAD70 = {
 			isa = PBXGroup;
 			children = (
+				029E5F422C1882A300CFAD70 /* LaunchScreen.storyboard */,
 				029E5F162C18806900CFAD70 /* poc_orange_belt */,
 				029E5F282C18806B00CFAD70 /* poc_orange_beltTests */,
 				029E5F322C18806B00CFAD70 /* poc_orange_beltUITests */,
@@ -95,6 +106,8 @@
 		029E5F162C18806900CFAD70 /* poc_orange_belt */ = {
 			isa = PBXGroup;
 			children = (
+				029E5F492C18915600CFAD70 /* View */,
+				029E5F442C18895400CFAD70 /* Model */,
 				029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */,
 				029E5F192C18806A00CFAD70 /* ContentView.swift */,
 				029E5F1B2C18806B00CFAD70 /* Assets.xcassets */,
@@ -127,6 +140,24 @@
 				029E5F352C18806B00CFAD70 /* poc_orange_beltUITestsLaunchTests.swift */,
 			);
 			path = poc_orange_beltUITests;
+			sourceTree = "<group>";
+		};
+		029E5F442C18895400CFAD70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				029E5F452C18896800CFAD70 /* ToDoListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		029E5F492C18915600CFAD70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				029E5F472C188BDA00CFAD70 /* ListView.swift */,
+				029E5F4A2C1891A400CFAD70 /* TileView.swift */,
+				028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029E5F432C1882A300CFAD70 /* LaunchScreen.storyboard in Resources */,
 				029E5F202C18806B00CFAD70 /* Preview Assets.xcassets in Resources */,
 				029E5F1C2C18806B00CFAD70 /* Assets.xcassets in Resources */,
 			);
@@ -259,7 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */,
+				029E5F482C188BDA00CFAD70 /* ListView.swift in Sources */,
 				029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */,
+				029E5F462C18896800CFAD70 /* ToDoListModel.swift in Sources */,
+				029E5F4B2C1891A400CFAD70 /* TileView.swift in Sources */,
 				029E5F182C18806900CFAD70 /* poc_orange_beltApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +466,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -468,6 +505,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
