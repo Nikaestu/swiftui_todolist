@@ -14,14 +14,11 @@ struct TileView: View {
     
     var body: some View {
         HStack {
-            Toggle(isOn: $isOn) {
-                
-            }
+            Toggle("", isOn: $isOn)
             .toggleStyle(iOSCheckboxToggleStyle())
             Text(tileItem.name)
                 .foregroundColor(isOn ? .gray : .black)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .bold()
+                .font(.title2)
                 .italic(isOn)
                 .strikethrough(isOn)
             Spacer()
@@ -31,7 +28,7 @@ struct TileView: View {
             }
         }
         .padding(25)
-        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+        .border(isOn ? Color.gray : Color.black)
         .padding()
     }
 }
@@ -43,7 +40,7 @@ struct iOSCheckboxToggleStyle: ToggleStyle {
         }, label: {
             HStack {
                 Image(systemName: configuration.isOn ? "checkmark.square" : "square")
-                    .colorInvert()
+                    .foregroundStyle(configuration.isOn ? Color(.gray) : Color(.black))
                 configuration.label
             }
         })
