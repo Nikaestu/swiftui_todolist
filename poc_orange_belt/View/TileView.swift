@@ -10,14 +10,20 @@ import SwiftUI
 struct TileView: View {
     var tileItem: Task
     var deleteAction: () -> Void
+    @State var isOn: Bool
     
     var body: some View {
         HStack {
-            VStack() {
-                Text(tileItem.name)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .bold()
+            Toggle(isOn: $isOn) {
+                
             }
+            .toggleStyle(iOSCheckboxToggleStyle())
+            Text(tileItem.name)
+                .foregroundColor(isOn ? .gray : .black)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .bold()
+                .italic(isOn)
+                .strikethrough(isOn)
             Spacer()
             Button(action: deleteAction) {
                 Image(systemName: "trash")
@@ -30,6 +36,21 @@ struct TileView: View {
     }
 }
 
+struct iOSCheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button(action: {
+            configuration.isOn.toggle()
+        }, label: {
+            HStack {
+                Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                    .colorInvert()
+                configuration.label
+            }
+        })
+    }
+}
+
+
 #Preview {
-    TileView(tileItem: Task(id: UUID(), name: "Tâche 1"), deleteAction: { print ("Okey")})
+    TileView(tileItem: Task(id: UUID(), name: "Tâche 1"), deleteAction: { print ("Okey")}, isOn: false)
 }

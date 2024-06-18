@@ -15,7 +15,7 @@ struct ListView: View {
             ForEach(tasks) { task in
                 TileView(tileItem: task, deleteAction: {
                     deleteTask(task)
-                })
+                }, isOn: false)
             }
         }
     }
