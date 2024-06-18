@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TileView: View {
     var tileItem: Task
+    var deleteAction: () -> Void
     
     var body: some View {
         HStack {
@@ -18,8 +19,10 @@ struct TileView: View {
                     .bold()
             }
             Spacer()
-            Image(systemName: "bin.xmark")
-                .imageScale(.large)
+            Button(action: deleteAction) {
+                Image(systemName: "trash")
+                    .foregroundColor(.red)
+            }
         }
         .padding(25)
         .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
@@ -28,5 +31,5 @@ struct TileView: View {
 }
 
 #Preview {
-    TileView(tileItem: Task(id: UUID(), name: "Titre"))
+    TileView(tileItem: Task(id: UUID(), name: "Tâche 1"), deleteAction: { print ("Okey")})
 }

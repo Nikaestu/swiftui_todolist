@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */; };
+		028C1A372C202A6500AAAF02 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A362C202A6500AAAF02 /* TitleView.swift */; };
+		028C1A392C20542100AAAF02 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A382C20542100AAAF02 /* ToDoListView.swift */; };
 		029E5F182C18806900CFAD70 /* poc_orange_beltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */; };
 		029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F192C18806A00CFAD70 /* ContentView.swift */; };
 		029E5F1C2C18806B00CFAD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F1B2C18806B00CFAD70 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationTaskView.swift; sourceTree = "<group>"; };
+		028C1A362C202A6500AAAF02 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		028C1A382C20542100AAAF02 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		029E5F142C18806900CFAD70 /* poc_orange_belt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poc_orange_belt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltApp.swift; sourceTree = "<group>"; };
 		029E5F192C18806A00CFAD70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				029E5F472C188BDA00CFAD70 /* ListView.swift */,
 				029E5F4A2C1891A400CFAD70 /* TileView.swift */,
 				028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */,
+				028C1A362C202A6500AAAF02 /* TitleView.swift */,
+				028C1A382C20542100AAAF02 /* ToDoListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 			files = (
 				028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */,
 				029E5F482C188BDA00CFAD70 /* ListView.swift in Sources */,
+				028C1A392C20542100AAAF02 /* ToDoListView.swift in Sources */,
 				029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */,
+				028C1A372C202A6500AAAF02 /* TitleView.swift in Sources */,
 				029E5F462C18896800CFAD70 /* ToDoListModel.swift in Sources */,
 				029E5F4B2C1891A400CFAD70 /* TileView.swift in Sources */,
 				029E5F182C18806900CFAD70 /* poc_orange_beltApp.swift in Sources */,

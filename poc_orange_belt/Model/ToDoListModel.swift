@@ -12,7 +12,3 @@ struct Task: Identifiable {
     var id: UUID
     var name: String
 }
-
-class TaskStore: ObservableObject {
-    @Published var task: [Task] = []
-}

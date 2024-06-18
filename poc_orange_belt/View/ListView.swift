@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct ListView: View {
-    
-    var data: [Task] = [
-        Task(id: UUID(), name: "Courir"),
-        Task(id: UUID(), name: "Nager")
-    ]
-    
+    @Binding var tasks: [Task]
+
     var body: some View {
         VStack {
-            ForEach(data) { item in
-                TileView(tileItem: item)
+            ForEach(tasks) { task in
+                TileView(tileItem: task, deleteAction: {
+                    deleteTask(task)
+                })
             }
+        }
+    }
+    
+    private func deleteTask(_ task: Task) {
+        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+            tasks.remove(at: index)
         }
     }
 }
 
 #Preview {
-    ListView()
+    ListView(tasks: .constant([Task(id: UUID(), name: "Test1")]))
 }
