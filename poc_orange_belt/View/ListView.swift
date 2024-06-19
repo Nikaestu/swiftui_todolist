@@ -13,7 +13,7 @@ struct ListView: View {
     var body: some View {
         VStack {
             ForEach(tasks) { task in
-                TileView(tileItem: task, deleteAction: {
+                TileView(tileItem: task, deleteAction: {    
                     deleteTask(task)
                 }, isOn: false)
             }

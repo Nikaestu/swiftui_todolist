@@ -12,12 +12,16 @@ struct TileView: View {
     var deleteAction: () -> Void
     @State var isOn: Bool
     
+    var textColor: Color {
+        return isOn ? .gray : .black
+    }
+    
     var body: some View {
         HStack {
             Toggle("", isOn: $isOn)
             .toggleStyle(iOSCheckboxToggleStyle())
             Text(tileItem.name)
-                .foregroundColor(isOn ? .gray : .black)
+                .foregroundColor(textColor)
                 .font(.title2)
                 .italic(isOn)
                 .strikethrough(isOn)
@@ -28,7 +32,7 @@ struct TileView: View {
             }
         }
         .padding(25)
-        .border(isOn ? Color.gray : Color.black)
+        .border(textColor)
         .padding()
     }
 }

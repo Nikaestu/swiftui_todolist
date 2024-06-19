@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026FAAED2C22DDB5006EA91F /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 026FAAEC2C22DDB5006EA91F /* ViewInspector */; };
 		028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A342C1C481A00AAAF02 /* CreationTaskView.swift */; };
 		028C1A372C202A6500AAAF02 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A362C202A6500AAAF02 /* TitleView.swift */; };
 		028C1A392C20542100AAAF02 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C1A382C20542100AAAF02 /* ToDoListView.swift */; };
 		029E5F182C18806900CFAD70 /* poc_orange_beltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */; };
-		029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F192C18806A00CFAD70 /* ContentView.swift */; };
 		029E5F1C2C18806B00CFAD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F1B2C18806B00CFAD70 /* Assets.xcassets */; };
 		029E5F202C18806B00CFAD70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029E5F1F2C18806B00CFAD70 /* Preview Assets.xcassets */; };
 		029E5F2A2C18806B00CFAD70 /* poc_orange_beltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5F292C18806B00CFAD70 /* poc_orange_beltTests.swift */; };
@@ -45,7 +45,6 @@
 		028C1A382C20542100AAAF02 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		029E5F142C18806900CFAD70 /* poc_orange_belt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poc_orange_belt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_orange_beltApp.swift; sourceTree = "<group>"; };
-		029E5F192C18806A00CFAD70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		029E5F1B2C18806B00CFAD70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029E5F1D2C18806B00CFAD70 /* poc_orange_belt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = poc_orange_belt.entitlements; sourceTree = "<group>"; };
 		029E5F1F2C18806B00CFAD70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026FAAED2C22DDB5006EA91F /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,6 @@
 				029E5F492C18915600CFAD70 /* View */,
 				029E5F442C18895400CFAD70 /* Model */,
 				029E5F172C18806900CFAD70 /* poc_orange_beltApp.swift */,
-				029E5F192C18806A00CFAD70 /* ContentView.swift */,
 				029E5F1B2C18806B00CFAD70 /* Assets.xcassets */,
 				029E5F1D2C18806B00CFAD70 /* poc_orange_belt.entitlements */,
 				029E5F1E2C18806B00CFAD70 /* Preview Content */,
@@ -197,6 +196,9 @@
 				029E5F272C18806B00CFAD70 /* PBXTargetDependency */,
 			);
 			name = poc_orange_beltTests;
+			packageProductDependencies = (
+				026FAAEC2C22DDB5006EA91F /* ViewInspector */,
+			);
 			productName = poc_orange_beltTests;
 			productReference = 029E5F252C18806B00CFAD70 /* poc_orange_beltTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -251,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 029E5F0B2C18806900CFAD70;
+			packageReferences = (
+				026FAAEB2C22DCD4006EA91F /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 029E5F152C18806900CFAD70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,7 +301,6 @@
 				028C1A352C1C481A00AAAF02 /* CreationTaskView.swift in Sources */,
 				029E5F482C188BDA00CFAD70 /* ListView.swift in Sources */,
 				028C1A392C20542100AAAF02 /* ToDoListView.swift in Sources */,
-				029E5F1A2C18806A00CFAD70 /* ContentView.swift in Sources */,
 				028C1A372C202A6500AAAF02 /* TitleView.swift in Sources */,
 				029E5F462C18896800CFAD70 /* ToDoListModel.swift in Sources */,
 				029E5F4B2C1891A400CFAD70 /* TileView.swift in Sources */,
@@ -659,6 +663,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		026FAAEB2C22DCD4006EA91F /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		026FAAEC2C22DDB5006EA91F /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 026FAAEB2C22DCD4006EA91F /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 029E5F0C2C18806900CFAD70 /* Project object */;
 }

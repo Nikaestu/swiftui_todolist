@@ -11,7 +11,7 @@ import SwiftUI
 struct poc_orange_beltApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ToDoListView()
         }
     }
 }

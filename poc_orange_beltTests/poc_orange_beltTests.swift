@@ -6,30 +6,143 @@
 //
 
 import XCTest
+@testable import poc_orange_belt
+import SwiftUI
+import ViewInspector
 
 final class poc_orange_beltTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // Class Task
+    func testTaskInitialiation() {
+        // Given
+        let id = UUID()
+        let taskName = "Sport"
+        let task = Task(id: id, name: taskName)
+        
+        // Then
+        XCTAssertEqual(task.name, "Sport")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    // Component TileView
+    // When isOn equals false
+    func testTileViewWhenisOnisFalse() {
+        // Given
+        let id = UUID()
+        let taskName = "Sport"
+        let task = Task(id: id, name: taskName)
+        let isOn = false
+        
+        // When
+        let tileView = TileView(tileItem: task, deleteAction: {}, isOn: isOn)
+        
+        // Then
+        XCTAssertEqual(tileView.isOn, false)
+        XCTAssertEqual(tileView.tileItem.name, "Sport")
+        XCTAssertEqual(tileView.textColor, .black)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    // When isOn equals true
+    func testTileViewWhenisOnisTrue() {
+        // Given
+        let id = UUID()
+        let taskName = "Sport"
+        let task = Task(id: id, name: taskName)
+        let isOn = true
+        
+        // When
+        let tileView = TileView(tileItem: task, deleteAction: {}, isOn: isOn)
+        
+        // Then
+        XCTAssertEqual(tileView.isOn, true)
+        XCTAssertEqual(tileView.tileItem.name, "Sport")
+        XCTAssertEqual(tileView.textColor, .gray)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    // Component TitleView
+    func testTitleView() {
+        // Given
+        let titleName = "Titre"
+        
+        // When
+        let titleView = TitleView(titleName: titleName)
+        
+        // Then
+        XCTAssertEqual(titleView.titleName, "Titre")
+    }
+    
+    // Component ListView
+    // Check two elements in the list
+    func testListViewWithTwoElements() {
+        // Given
+        let uuid1 = UUID()
+        let name1 = "Tâche"
+        let uuid2 = UUID()
+        let name2 = "Tâche 2"
+        var tasksList = [Task(id: uuid1, name: name1), Task(id: uuid2, name: name2)]
+        let bindingTasksList = Binding<[Task]>(
+            get: { tasksList },
+            set: { _ in }
+        )
+        
+        // When
+        let listView = ListView(tasks: bindingTasksList)
+        
+        // Then
+        do {
+            let view = try listView.inspect()
+            let tileViews = view.findAll(TileView.self)
+            
+            XCTAssertEqual(tileViews.count, tasksList.count, "The number of tasks in ListView should match")
+        } catch {
+            XCTFail("Failed to inspect ListView: \(error)")
+        }
+        
+        // When
+        let uuid3 = UUID()
+        let name3 = "Tâche 3"
+        let tasksAddOne = Task(id: uuid3, name: name3)
+        
+        tasksList.append(tasksAddOne)
+        
+        // Then
+        do {
+            let view = try listView.inspect()
+            let tileViews = view.findAll(TileView.self)
+            
+            XCTAssertEqual(tileViews.count, tasksList.count, "The number of tasks in ListView should match")
+        } catch {
+            XCTFail("Failed to inspect ListView: \(error)")
         }
     }
-
+    
+    // Check add one element in the list
+    func testListViewWithAddOneElement() {
+        // Given
+        let uuid1 = UUID()
+        let name1 = "Tâche"
+        let uuid2 = UUID()
+        let name2 = "Tâche 2"
+        var tasksList = [Task(id: uuid1, name: name1), Task(id: uuid2, name: name2)]
+        let bindingTasksList = Binding<[Task]>(
+            get: { tasksList },
+            set: { _ in }
+        )
+        let uuid3 = UUID()
+        let name3 = "Tâche 3"
+        let tasksAddOne = Task(id: uuid3, name: name3)
+        tasksList.append(tasksAddOne)
+        
+        // When
+        let listView = ListView(tasks: bindingTasksList)
+        
+        // Then
+        do {
+            let view = try listView.inspect()
+            let tileViews = view.findAll(TileView.self)
+            
+            XCTAssertEqual(tileViews.count, tasksList.count, "The number of tasks in ListView should match")
+        } catch {
+            XCTFail("Failed to inspect ListView: \(error)")
+        }
+    }
 }
