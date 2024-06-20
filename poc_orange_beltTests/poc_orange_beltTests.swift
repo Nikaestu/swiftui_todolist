@@ -145,4 +145,21 @@ final class poc_orange_beltTests: XCTestCase {
             XCTFail("Failed to inspect ListView: \(error)")
         }
     }
+    
+    // Component CreationTaskView
+    func testCreationTaskViewWorks() {
+        // Given
+        var task = Task(id: UUID(), name: "")
+                
+        // When
+        let taskBinding = Binding<Task?>(
+            get: { task },
+            set: { task = $0 ?? Task(id: UUID(), name: "") }
+        )
+        
+        // Then
+        _ = CreationTaskView(task: taskBinding, onSaveTask: { savedTask in
+            XCTAssertEqual(savedTask?.name, "Courir")
+        })
+    }
 }
